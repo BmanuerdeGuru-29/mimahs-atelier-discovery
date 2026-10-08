@@ -1,0 +1,4742 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MIMAH'S ATELIER – Business & Website Discovery Questionnaire",
+  "version": "1.0.0",
+  "id": "mimahs-atelier-discovery",
+  "description": "Definition of every section and question. Used to drive the digital questionnaire and to interpret exported response files.",
+  "storageNote": "Your answers are saved only on this device, in this browser. Nothing is sent anywhere until you choose to send the file yourself.",
+  "answerStatuses": {
+    "unsure": "Not sure yet",
+    "na": "Not applicable",
+    "help": "Please help me write this"
+  },
+  "answerTypes": {
+    "text": "string",
+    "longtext": "string",
+    "number": "number|string",
+    "url": "string",
+    "email": "string",
+    "tel": "string",
+    "date": "string (YYYY-MM-DD)",
+    "radio": "string (one of options; 'Other' with companion <id>__other)",
+    "checkbox": "string[] (options; 'Other' with companion <id>__other)",
+    "matrix": "{ [rowId]: choice }",
+    "rank": "string[] (ordered, index 0 = most important)",
+    "repeater": "object[] keyed by field id",
+    "multitext": "{ [fieldId]: string }",
+    "file": "string[] of file names (files are sent separately)"
+  },
+  "summarySections": {
+    "brand": "Brand Summary",
+    "business": "Business Summary",
+    "audience": "Target Audience",
+    "catalogue": "Product Catalogue",
+    "pricing": "Pricing",
+    "ordering": "Ordering Process",
+    "custom": "Custom Orders",
+    "payments": "Payments",
+    "delivery": "Delivery",
+    "social": "Social Media",
+    "goals": "Website Goals",
+    "features": "Required Features",
+    "content": "Content Requirements",
+    "direction": "Brand Direction",
+    "competitors": "Competitors",
+    "policies": "Policies",
+    "future": "Future Plans",
+    "technical": "Technical Requirements",
+    "assets": "Assets Available"
+  },
+  "sections": [
+    {
+      "id": "s1",
+      "number": 1,
+      "title": "About Mimah's Atelier",
+      "description": "Let's start with you and your story. There are no wrong answers. Write the way you would speak to a friend; we will shape it into polished website words later.",
+      "summarySection": "business",
+      "questions": [
+        {
+          "id": "s1_name",
+          "label": "What is the full name of your business?",
+          "type": "text",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "example": "Mimah's Atelier"
+        },
+        {
+          "id": "s1_spelling",
+          "label": "How exactly should the name be written?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "help": "Capital letters, apostrophe, spacing: tell us the version you consider correct.",
+          "example": "Mimah's Atelier (not MIMAHS ATELIER)"
+        },
+        {
+          "id": "s1_nameMeaning",
+          "label": "Does the name have a meaning, or a story behind it?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "help": "Who is Mimah? Why 'Atelier'? Customers love knowing this."
+        },
+        {
+          "id": "s1_describe",
+          "label": "In one sentence, how would you describe what your business does?",
+          "type": "text",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": true,
+          "summarySection": "business",
+          "example": "I make handmade crochet bags and clothing for women who love unique pieces."
+        },
+        {
+          "id": "s1_howStarted",
+          "label": "How did the business start?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business",
+          "help": "The moment, the place, the first item you sold."
+        },
+        {
+          "id": "s1_startDate",
+          "label": "When did it start?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business",
+          "example": "March 2021, or 'about 3 years ago'"
+        },
+        {
+          "id": "s1_owner",
+          "label": "Who is the founder/owner? What name should appear on the website?",
+          "type": "text",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "business",
+          "example": "Mimah (first name only) / Full name"
+        },
+        {
+          "id": "s1_team",
+          "label": "Do you make everything yourself?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business",
+          "help": "This helps us write honest, accurate copy such as 'handmade by me' or 'handmade by our team'.",
+          "options": [
+            "Yes, I make everything myself",
+            "I have helpers or a small team",
+            "I work with other crocheters/artisans",
+            "Other"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s1_crochetStory",
+          "label": "How did you start crocheting? Who taught you, and when did you fall in love with it?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business"
+        },
+        {
+          "id": "s1_inspiration",
+          "label": "What inspired you to turn crochet into a business?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business"
+        },
+        {
+          "id": "s1_special",
+          "label": "What makes your business special or different from other crochet sellers?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business"
+        },
+        {
+          "id": "s1_proud",
+          "label": "What are you most proud of so far?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business",
+          "example": "A wedding order, my first 100 customers, a bag that went overseas..."
+        },
+        {
+          "id": "s1_stands",
+          "label": "What does your business stand for?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": true,
+          "summarySection": "business"
+        },
+        {
+          "id": "s1_mission",
+          "label": "Mission: what are you trying to do for your customers every day?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": true,
+          "summarySection": "business",
+          "help": "No official wording needed. Say it in your own words."
+        },
+        {
+          "id": "s1_vision",
+          "label": "Vision: what do you hope Mimah's Atelier will become one day?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": true,
+          "summarySection": "business"
+        },
+        {
+          "id": "s1_values",
+          "label": "Which values describe your business? (choose up to 5)",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business",
+          "options": [
+            "Quality craftsmanship",
+            "Creativity",
+            "Patience and care",
+            "Authenticity",
+            "Uniqueness: no two pieces the same",
+            "Empowering women",
+            "Community",
+            "Zimbabwean/African heritage",
+            "Sustainability",
+            "Kindness",
+            "Excellence",
+            "Affordable beauty"
+          ],
+          "allowOther": true,
+          "maxChoices": 5
+        },
+        {
+          "id": "s1_feel",
+          "label": "How do you want customers to FEEL when they wear or use your work?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "options": [
+            "Beautiful",
+            "Confident",
+            "Special/unique",
+            "Cozy and comforted",
+            "Elegant",
+            "Proud to support local",
+            "Cared for",
+            "Inspired",
+            "Joyful"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s1_intro",
+          "label": "Short introduction (2–3 sentences) you'd be happy to see on the home page",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": true,
+          "summarySection": "content",
+          "help": "A quick 'hello' to a new visitor."
+        },
+        {
+          "id": "s1_aboutStory",
+          "label": "Your longer 'About Us' story",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": true,
+          "summarySection": "content",
+          "help": "Tell it as a story: where you started, the challenges, what you love, where you're going. A few paragraphs is perfect. Bullet points are fine too."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "number": 2,
+      "title": "Brand Identity",
+      "description": "Here we learn how Mimah's Atelier should look and feel: colours, style and personality. Pictures say a lot, so share links to anything you love.",
+      "summarySection": "brand",
+      "questions": [
+        {
+          "id": "s2_logoOfficial",
+          "label": "Is your current logo the official Mimah's Atelier logo?",
+          "type": "radio",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "options": [
+            "Yes, it is final",
+            "It is in use but I may change it",
+            "I am still working on it",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s2_logoFile",
+          "label": "Do you have the original, high-quality logo file?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "help": "This is the file the designer gave you, often ending in .png, .ai, .svg, .pdf or .eps. A WhatsApp-compressed picture is not the same thing.",
+          "options": [
+            "Yes, I have the original file(s)",
+            "I only have it as a photo or screenshot",
+            "A designer made it and may have the file",
+            "Not sure what that means: we'll help",
+            "No"
+          ]
+        },
+        {
+          "id": "s2_logoVersions",
+          "label": "Which versions of the logo exist?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "options": [
+            "Full colour",
+            "White/light version",
+            "Black version",
+            "Icon/symbol only",
+            "Horizontal layout",
+            "Stacked layout",
+            "Only one version",
+            "Not sure"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s2_logoUpload",
+          "label": "Upload placeholder: logo files",
+          "type": "file",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "help": "This prototype stores file names only. You'll send the actual files with the checklist at the end (WhatsApp, email or Drive)."
+        },
+        {
+          "id": "s2_colours",
+          "label": "Which colours do you like for your brand?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "options": [
+            "Lavender",
+            "Soft purple",
+            "Cream",
+            "Warm white",
+            "Gold accents",
+            "Blush pink",
+            "Sage green",
+            "Dusty blue",
+            "Terracotta/earth tones",
+            "Charcoal/black",
+            "Bright and bold colours",
+            "Neutral/natural tones"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s2_coloursInLogo",
+          "label": "Which colours are in your logo or already used on your pages?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "example": "Purple and gold. If you know the colour codes, add them (like #7B5EA7)."
+        },
+        {
+          "id": "s2_coloursAvoid",
+          "label": "Are there colours you do NOT want?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "example": "No bright orange, no neon"
+        },
+        {
+          "id": "s2_styleLike",
+          "label": "Which words describe the visual style you like?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "options": [
+            "Elegant",
+            "Feminine",
+            "Luxury",
+            "Handmade",
+            "Minimalist",
+            "Modern",
+            "Playful",
+            "Warm",
+            "Artistic",
+            "Traditional",
+            "African-inspired",
+            "Youthful",
+            "Premium",
+            "Cozy",
+            "Fashion-forward"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s2_feel",
+          "label": "If you could only pick THREE, how should the brand feel?",
+          "type": "checkbox",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "options": [
+            "Elegant",
+            "Feminine",
+            "Luxury",
+            "Handmade",
+            "Minimalist",
+            "Modern",
+            "Playful",
+            "Warm",
+            "Artistic",
+            "Traditional",
+            "African-inspired",
+            "Youthful",
+            "Premium",
+            "Cozy",
+            "Fashion-forward"
+          ],
+          "maxChoices": 3
+        },
+        {
+          "id": "s2_styleDislike",
+          "label": "Which styles do you dislike, or never want your brand to look like?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "example": "Too childish, too corporate, too cluttered, too dark..."
+        },
+        {
+          "id": "s2_type",
+          "label": "Lettering and fonts: which feels most like you?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "direction",
+          "options": [
+            "Elegant, classic serif letters",
+            "Clean, modern letters",
+            "Handwritten/script touches",
+            "A mix of elegant and modern",
+            "No preference: choose for me",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s2_fontsLike",
+          "label": "Do you know a font or lettering style you love, or the one in your logo?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "example": "The Mimah's Atelier logo uses a script font"
+        },
+        {
+          "id": "s2_inspoLinks",
+          "label": "Share links to websites, Instagram pages, brands or Pinterest boards whose look you love",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "help": "Paste links or @handles, one per line.",
+          "example": "@somebrand\nhttps://pinterest.com/..."
+        },
+        {
+          "id": "s2_inspoWhy",
+          "label": "What exactly do you like about them?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "help": "The colours? The photos? How simple it is? How cozy it feels?"
+        },
+        {
+          "id": "s2_words",
+          "label": "What 5 words do you want people to associate with Mimah's Atelier?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "example": "Handmade, elegant, unique, warm, Zimbabwean"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "number": 3,
+      "title": "Your Products",
+      "description": "This is the heart of the website. Tell us exactly what you sell today. Please tick only what you really offer. Don't worry about perfect details, start with your most popular items and send the rest later.",
+      "summarySection": "catalogue",
+      "questions": [
+        {
+          "id": "s3_cats",
+          "label": "Which of these do you currently sell?",
+          "type": "checkbox",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue",
+          "help": "Tick everything you currently offer. Leave out anything you don't.",
+          "options": [
+            "Crochet bags",
+            "Dresses",
+            "Tops",
+            "Skirts",
+            "Hats",
+            "Bucket hats",
+            "Scarves",
+            "Shawls",
+            "Cardigans",
+            "Sweaters",
+            "Baby items",
+            "Accessories",
+            "Jewelry",
+            "Home décor",
+            "Blankets",
+            "Decorative pieces",
+            "Keyholders",
+            "Custom pieces"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s3_otherCats",
+          "label": "Anything else you make that isn't in the list? Anything you plan to add soon?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue"
+        },
+        {
+          "id": "s3_bestsellers",
+          "label": "Which items sell best, or get the most compliments?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue",
+          "help": "These will probably be featured on the home page."
+        },
+        {
+          "id": "s3_signature",
+          "label": "Do you have a 'signature' piece you're known for?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue"
+        },
+        {
+          "id": "s3_list",
+          "label": "Your product list: add one card per product (or per kind of product)",
+          "type": "repeater",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue",
+          "help": "Add at least your 3–5 best sellers now. If you already have a price list or catalogue, skip this and upload it at the end instead (Section 23). 'Not sure' answers are fine: just leave a field blank.",
+          "fields": [
+            {
+              "id": "name",
+              "label": "Product name",
+              "type": "text",
+              "ex": "Mini shoulder bag"
+            },
+            {
+              "id": "category",
+              "label": "Category",
+              "type": "text",
+              "ex": "Bags"
+            },
+            {
+              "id": "desc",
+              "label": "Short description",
+              "type": "long"
+            },
+            {
+              "id": "price",
+              "label": "Price",
+              "type": "number"
+            },
+            {
+              "id": "currency",
+              "label": "Currency",
+              "type": "select",
+              "options": [
+                "USD",
+                "ZiG",
+                "ZAR",
+                "Other"
+              ]
+            },
+            {
+              "id": "priceVaries",
+              "label": "Is the price fixed or does it vary?",
+              "type": "select",
+              "options": [
+                "Fixed",
+                "Varies by size",
+                "Varies by colour/yarn",
+                "Varies by complexity",
+                "Quoted per order"
+              ]
+            },
+            {
+              "id": "colours",
+              "label": "Colours available",
+              "type": "text"
+            },
+            {
+              "id": "sizes",
+              "label": "Sizes",
+              "type": "text",
+              "ex": "S, M, L or custom measurements"
+            },
+            {
+              "id": "materials",
+              "label": "Materials/yarn",
+              "type": "text"
+            },
+            {
+              "id": "dimensions",
+              "label": "Approximate dimensions",
+              "type": "text",
+              "ex": "25cm × 20cm"
+            },
+            {
+              "id": "time",
+              "label": "Time to make",
+              "type": "text",
+              "ex": "3–5 days"
+            },
+            {
+              "id": "stock",
+              "label": "Ready-made or made-to-order?",
+              "type": "select",
+              "options": [
+                "Ready-made (in stock)",
+                "Made-to-order",
+                "Both"
+              ]
+            },
+            {
+              "id": "stockQty",
+              "label": "How many in stock (if ready-made)?",
+              "type": "number"
+            },
+            {
+              "id": "custom",
+              "label": "Can it be customised?",
+              "type": "select",
+              "options": [
+                "Yes",
+                "No",
+                "Sometimes"
+              ]
+            },
+            {
+              "id": "customOptions",
+              "label": "What can be changed?",
+              "type": "text",
+              "ex": "Colour, size, name initials"
+            },
+            {
+              "id": "care",
+              "label": "Care instructions",
+              "type": "long"
+            },
+            {
+              "id": "photos",
+              "label": "Do you have photos of it?",
+              "type": "select",
+              "options": [
+                "Yes, good ones",
+                "Yes, but need improving",
+                "No"
+              ]
+            },
+            {
+              "id": "sku",
+              "label": "Product code (if you use one)",
+              "type": "text"
+            },
+            {
+              "id": "seasonal",
+              "label": "Is it seasonal?",
+              "type": "select",
+              "options": [
+                "No, all year",
+                "Yes, seasonal"
+              ]
+            },
+            {
+              "id": "show",
+              "label": "Show it on the website?",
+              "type": "select",
+              "options": [
+                "Yes",
+                "No",
+                "Not sure yet"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s3_upload",
+          "label": "Upload placeholder: price list or product catalogue",
+          "type": "file",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue",
+          "help": "A photo of your list, a spreadsheet, a PDF, anything works. Send the actual file with your assets."
+        },
+        {
+          "id": "s3_priceModel",
+          "label": "How are your prices decided?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "pricing",
+          "options": [
+            "Fixed price per item",
+            "Changes with size",
+            "Changes with colour or yarn",
+            "Changes with how complex the design is",
+            "Quoted individually for each order"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s3_priceNotes",
+          "label": "Anything we should know about how your prices work?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "pricing",
+          "example": "Larger sizes cost extra; textured stitches cost more."
+        },
+        {
+          "id": "s3_yarns",
+          "label": "Which materials do you mainly work with?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue",
+          "options": [
+            "Cotton",
+            "Mercerised cotton",
+            "Milk cotton",
+            "Acrylic",
+            "Wool",
+            "Raffia/natural fibres",
+            "Polyester",
+            "Blended yarn",
+            "Recycled/upcycled"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s3_ready",
+          "label": "Is your work mostly…",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue",
+          "options": [
+            "Ready-made (in stock)",
+            "Made-to-order",
+            "A good mix of both"
+          ]
+        },
+        {
+          "id": "s3_sizeRange",
+          "label": "For clothing: what sizes do you make?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue",
+          "example": "XS–XL; I also make to measure"
+        },
+        {
+          "id": "s3_soldOut",
+          "label": "When a product is sold out, what should the website do?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue",
+          "options": [
+            "Show 'Sold out' and keep it visible",
+            "Show 'Sold out: order a similar one'",
+            "Show 'Available on request'",
+            "Hide it",
+            "Not sure yet",
+            "Not applicable"
+          ]
+        },
+        {
+          "id": "s3_newFreq",
+          "label": "How often do you add new designs?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue",
+          "options": [
+            "Weekly",
+            "Monthly",
+            "Every few months",
+            "Seasonally",
+            "Irregularly"
+          ]
+        },
+        {
+          "id": "s3_seasonal",
+          "label": "Are there busy seasons or seasonal collections?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue",
+          "example": "December gifts, Mother's Day, winter"
+        },
+        {
+          "id": "s3_stockTrack",
+          "label": "How do you keep track of what you have in stock right now?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue",
+          "options": [
+            "In my head",
+            "Notebook",
+            "Phone notes",
+            "Spreadsheet",
+            "I make to order, so there is no stock",
+            "Other"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s3_hidden",
+          "label": "Is there anything you do NOT want shown on the website?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue",
+          "example": "Old designs, discounted items"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "number": 4,
+      "title": "Custom Orders",
+      "description": "Custom orders may be a big part of your business. Help us understand exactly how they work today and how you'd love them to work.",
+      "summarySection": "custom",
+      "questions": [
+        {
+          "id": "s4_accepts",
+          "label": "Do you accept custom crochet orders?",
+          "type": "radio",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "options": [
+            "Yes, always",
+            "Yes, but only some types or at some times",
+            "No",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s4_types",
+          "label": "What kinds of custom orders do you accept?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "options": [
+            "Bags",
+            "Clothing",
+            "Accessories",
+            "Baby items",
+            "Home décor",
+            "Gifts",
+            "Wedding and event pieces",
+            "Matching sets",
+            "Personalised (names/initials)",
+            "Corporate/branded items",
+            "Recreating a picture the customer brings",
+            "Repairs or alterations"
+          ],
+          "allowOther": true,
+          "showIf": {
+            "id": "s4_accepts",
+            "any": [
+              "Yes, always",
+              "Yes, but only some types or at some times"
+            ]
+          }
+        },
+        {
+          "id": "s4_current",
+          "label": "How does a customer place a custom order today?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "example": "They WhatsApp me a picture, I reply with a price, we agree..."
+        },
+        {
+          "id": "s4_info",
+          "label": "What information do you need from a customer before you can quote?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "options": [
+            "Name",
+            "Phone/WhatsApp",
+            "Type of item",
+            "Size or measurements",
+            "Colours",
+            "Reference pictures",
+            "Budget",
+            "Date they need it",
+            "Delivery location",
+            "Occasion or event",
+            "Name/initials to include"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s4_refImages",
+          "label": "Do customers need to send reference pictures?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "options": [
+            "Yes, always",
+            "Helpful, but not required",
+            "Not needed"
+          ]
+        },
+        {
+          "id": "s4_colours",
+          "label": "Can customers choose colours?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "options": [
+            "Yes, any colour",
+            "From colours I have available",
+            "No: I choose",
+            "Case by case"
+          ]
+        },
+        {
+          "id": "s4_sizes",
+          "label": "Can customers choose sizes?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "options": [
+            "Yes, standard sizes",
+            "Yes, to their measurements",
+            "Limited sizes only",
+            "No",
+            "Case by case"
+          ]
+        },
+        {
+          "id": "s4_original",
+          "label": "Can customers request completely original designs?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "options": [
+            "Yes",
+            "Only variations of my existing designs",
+            "Case by case",
+            "No"
+          ]
+        },
+        {
+          "id": "s4_priceBasis",
+          "label": "How do you work out the price of a custom order?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "pricing",
+          "options": [
+            "Time it takes",
+            "Amount of yarn",
+            "Complexity of design",
+            "Size",
+            "How urgent it is",
+            "Fixed prices for each item type"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s4_quote",
+          "label": "Should customers see a price (or price range) before they send a request?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "pricing",
+          "options": [
+            "Yes, show 'from' prices",
+            "No, I quote after seeing the details",
+            "Both: 'from' prices, then a final quote",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s4_deposit",
+          "label": "Do you ask for a deposit on custom orders?",
+          "type": "radio",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "payments",
+          "options": [
+            "Yes, always",
+            "Only for bigger orders",
+            "No",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s4_depositPct",
+          "label": "What deposit percentage?",
+          "type": "number",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "payments",
+          "example": "50",
+          "suffix": "%",
+          "showIf": {
+            "id": "s4_deposit",
+            "any": [
+              "Yes, always",
+              "Only for bigger orders"
+            ]
+          }
+        },
+        {
+          "id": "s4_balance",
+          "label": "When is the remaining balance paid?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "payments",
+          "options": [
+            "Before I start",
+            "Halfway through",
+            "When it is finished, before delivery",
+            "On collection/delivery",
+            "Other"
+          ],
+          "allowOther": true,
+          "showIf": {
+            "id": "s4_deposit",
+            "any": [
+              "Yes, always",
+              "Only for bigger orders"
+            ]
+          }
+        },
+        {
+          "id": "s4_time",
+          "label": "How long does a custom order usually take?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "example": "1–2 weeks for bags, 3 weeks for dresses"
+        },
+        {
+          "id": "s4_capacity",
+          "label": "How many custom orders can you handle at the same time?",
+          "type": "number",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "example": "5"
+        },
+        {
+          "id": "s4_changeMind",
+          "label": "What happens if a customer changes their mind after you've started?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom"
+        },
+        {
+          "id": "s4_cancel",
+          "label": "What happens if a customer cancels? (Deposit refundable? Within what time?)",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom"
+        },
+        {
+          "id": "s4_cannotComplete",
+          "label": "What happens if you can't complete an order?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "example": "Illness, yarn unavailable..."
+        },
+        {
+          "id": "s4_rush",
+          "label": "Do you offer rush orders?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "options": [
+            "Yes",
+            "Sometimes",
+            "No"
+          ]
+        },
+        {
+          "id": "s4_rushFee",
+          "label": "Are rush orders charged extra? How much?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "example": "Yes, 25% extra",
+          "showIf": {
+            "id": "s4_rush",
+            "any": [
+              "Yes",
+              "Sometimes"
+            ]
+          }
+        },
+        {
+          "id": "s4_min",
+          "label": "Is there a minimum order value or quantity?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "example": "No minimum / USD 20 minimum"
+        },
+        {
+          "id": "s4_progress",
+          "label": "Would you like to share progress photos with the customer while you work?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "options": [
+            "Yes, always",
+            "Sometimes",
+            "No"
+          ]
+        },
+        {
+          "id": "s4_approve",
+          "label": "Does the customer approve a sketch/photo/colour plan before you begin?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "options": [
+            "Yes, always",
+            "Sometimes",
+            "No"
+          ]
+        },
+        {
+          "id": "s4_flow",
+          "label": "Describe your IDEAL custom-order process, step by step",
+          "type": "multitext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "help": "Imagine everything running smoothly. What happens at each step? A sentence or two is enough.",
+          "fields": [
+            {
+              "id": "idea",
+              "label": "1. The customer has an IDEA"
+            },
+            {
+              "id": "request",
+              "label": "2. They send a REQUEST"
+            },
+            {
+              "id": "quote",
+              "label": "3. You send a QUOTE"
+            },
+            {
+              "id": "deposit",
+              "label": "4. DEPOSIT is paid"
+            },
+            {
+              "id": "production",
+              "label": "5. PRODUCTION (making it)"
+            },
+            {
+              "id": "completion",
+              "label": "6. COMPLETION (checking and approving)"
+            },
+            {
+              "id": "delivery",
+              "label": "7. DELIVERY or PICKUP"
+            }
+          ]
+        },
+        {
+          "id": "s4_example",
+          "label": "Tell us about a recent custom order you were proud of (optional)",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "custom",
+          "help": "It helps us understand the real thing."
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "number": 5,
+      "title": "Pricing & Payments",
+      "description": "How you charge and get paid. We won't assume anything; tick only what you really use or want to use.",
+      "summarySection": "payments",
+      "questions": [
+        {
+          "id": "s5_currency",
+          "label": "Which currencies do you use for pricing?",
+          "type": "checkbox",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "pricing",
+          "options": [
+            "USD",
+            "ZiG",
+            "ZAR",
+            "Other"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s5_showPrices",
+          "label": "Should the website show prices publicly?",
+          "type": "radio",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "pricing",
+          "options": [
+            "Yes, show all prices",
+            "Show 'from' prices",
+            "Only 'price on request'",
+            "A mix, depending on the product",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s5_delivery",
+          "label": "Do your prices include delivery?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "pricing",
+          "options": [
+            "Yes",
+            "No, delivery is extra",
+            "It varies",
+            "Not applicable"
+          ]
+        },
+        {
+          "id": "s5_priceChange",
+          "label": "How often do your prices change?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "pricing",
+          "options": [
+            "Rarely",
+            "A few times a year",
+            "Often (yarn costs, exchange rate)",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "s5_methods",
+          "label": "Which payment methods do you accept, or want to accept?",
+          "type": "checkbox",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "payments",
+          "options": [
+            "Cash",
+            "EcoCash",
+            "OneMoney",
+            "InnBucks",
+            "ZIPIT",
+            "Bank transfer",
+            "Paynow",
+            "Visa/Mastercard",
+            "PayPal",
+            "Pay on delivery/collection"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s5_methodsNote",
+          "label": "Anything we should know about how payment works?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "payments",
+          "help": "Please do NOT type account or wallet numbers here. We'll collect them securely later.",
+          "example": "Customers send EcoCash then WhatsApp me the confirmation."
+        },
+        {
+          "id": "s5_onlinePay",
+          "label": "Should customers be able to pay on the website itself?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "features",
+          "options": [
+            "Yes, from the start",
+            "Maybe later",
+            "No: payment arranged after enquiry",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s5_receipts",
+          "label": "Do you issue receipts or invoices?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "payments",
+          "options": [
+            "Yes, always",
+            "Sometimes, on request",
+            "No",
+            "Would like to start"
+          ]
+        },
+        {
+          "id": "s5_discounts",
+          "label": "Do you offer discounts?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "payments",
+          "options": [
+            "Yes, regularly",
+            "Sometimes",
+            "Never"
+          ]
+        },
+        {
+          "id": "s5_promos",
+          "label": "Which promotions do you run, or might you run?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "payments",
+          "options": [
+            "Seasonal sales",
+            "First-order discount",
+            "Referral rewards",
+            "Bundle deals",
+            "Free delivery over a certain amount",
+            "Loyalty rewards",
+            "Social media giveaways"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s5_wholesale",
+          "label": "Do you offer wholesale pricing?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "payments",
+          "options": [
+            "Yes",
+            "Not yet, but I'd like to",
+            "No"
+          ]
+        },
+        {
+          "id": "s5_wholesaleDetails",
+          "label": "Wholesale details: minimum quantity, discount, who it's for",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "payments",
+          "showIf": {
+            "id": "s5_wholesale",
+            "any": [
+              "Yes",
+              "Not yet, but I'd like to"
+            ]
+          }
+        },
+        {
+          "id": "s5_bundles",
+          "label": "Do you sell bundles or sets?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "payments",
+          "options": [
+            "Yes",
+            "Would like to",
+            "No"
+          ]
+        },
+        {
+          "id": "s5_gift",
+          "label": "Gift cards or vouchers?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "payments",
+          "options": [
+            "Already offer them",
+            "Would like to offer them",
+            "No"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "number": 6,
+      "title": "Customers & Target Market",
+      "description": "Who buys from you, and why? Think of real customers you've met.",
+      "summarySection": "audience",
+      "questions": [
+        {
+          "id": "s6_who",
+          "label": "Who are your main customers?",
+          "type": "checkbox",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "audience",
+          "options": [
+            "Women",
+            "Men",
+            "Children",
+            "Parents",
+            "Couples",
+            "Businesses",
+            "Gift buyers",
+            "Fashion enthusiasts",
+            "Brides and wedding parties",
+            "Event planners/hosts",
+            "Tourists"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s6_age",
+          "label": "What age groups buy from you most?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "audience",
+          "options": [
+            "Under 18",
+            "18–24",
+            "25–34",
+            "35–44",
+            "45–54",
+            "55+",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "s6_where",
+          "label": "Where are your customers?",
+          "type": "checkbox",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "audience",
+          "options": [
+            "Kwekwe",
+            "Other Midlands towns",
+            "Harare",
+            "Bulawayo",
+            "Other Zimbabwean cities/towns",
+            "All over Zimbabwe",
+            "Zimbabweans living abroad",
+            "International customers"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s6_budget",
+          "label": "Roughly, what is your customers' budget like?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "pricing",
+          "options": [
+            "Budget-conscious",
+            "Middle range",
+            "Premium/high-end",
+            "A mix of all",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "s6_fashion",
+          "label": "What kind of fashion or style do they love?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "audience",
+          "example": "Boho, church wear, beach wear, trendy streetwear..."
+        },
+        {
+          "id": "s6_habits",
+          "label": "How do they usually shop? When do they buy most?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "audience",
+          "example": "They find me on Instagram, message on WhatsApp, buy at month-end or around holidays."
+        },
+        {
+          "id": "s6_reasons",
+          "label": "Why do customers buy crochet from you?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "audience",
+          "options": [
+            "Gifts",
+            "Weddings and special events",
+            "Everyday fashion",
+            "Support local/handmade",
+            "Unique, one-of-a-kind pieces",
+            "Baby showers/new babies",
+            "Home decoration",
+            "Custom designs"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s6_requests",
+          "label": "What do customers ask you for most often?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "audience"
+        },
+        {
+          "id": "s6_questions",
+          "label": "What questions do customers ask again and again?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "audience",
+          "help": "This becomes the FAQ section and saves you time on WhatsApp.",
+          "example": "How long does it take? Can you do it in another colour? Do you deliver to Harare?"
+        },
+        {
+          "id": "s6_value",
+          "label": "What do your customers value most?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "audience",
+          "options": [
+            "Quality",
+            "Uniqueness",
+            "Price",
+            "Speed",
+            "Personal service",
+            "Beautiful finishing",
+            "Being able to customise",
+            "Supporting a local artisan"
+          ],
+          "allowOther": true,
+          "maxChoices": 3
+        },
+        {
+          "id": "s6_why",
+          "label": "Why do they choose Mimah's Atelier over other options?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "audience",
+          "help": "Including cheaper shop-bought items, or other crochet sellers."
+        },
+        {
+          "id": "s6_intl",
+          "label": "Would you like to attract customers outside Zimbabwe?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "future",
+          "options": [
+            "Yes, soon",
+            "Maybe later",
+            "No",
+            "Not sure yet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "number": 7,
+      "title": "Ordering & Customer Communication",
+      "description": "How do customers reach you today, and how would you like it to work on the website?",
+      "summarySection": "ordering",
+      "questions": [
+        {
+          "id": "s7_channels",
+          "label": "How do customers contact you today?",
+          "type": "checkbox",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "options": [
+            "WhatsApp",
+            "WhatsApp Business",
+            "Facebook",
+            "Instagram",
+            "TikTok",
+            "Email",
+            "Phone calls",
+            "Walk-in/in-person"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s7_preferred",
+          "label": "Which way do you PREFER customers to contact you?",
+          "type": "radio",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "options": [
+            "WhatsApp",
+            "Instagram",
+            "Facebook",
+            "Phone call",
+            "Email",
+            "Website form"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s7_whatsapp",
+          "label": "Which WhatsApp number should customers use?",
+          "type": "tel",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "help": "This will be shown publicly on the website. If you'd rather use a separate business number, tell us in the notes at the end.",
+          "example": "+263 7X XXX XXXX"
+        },
+        {
+          "id": "s7_waType",
+          "label": "Is this a WhatsApp Business account or regular WhatsApp?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "options": [
+            "WhatsApp Business",
+            "Regular WhatsApp",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "s7_phone",
+          "label": "Phone number for calls (if different)",
+          "type": "tel",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering"
+        },
+        {
+          "id": "s7_email",
+          "label": "Email address customers should use",
+          "type": "email",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "example": "hello@..."
+        },
+        {
+          "id": "s7_public",
+          "label": "Which contact details may be shown publicly?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "options": [
+            "WhatsApp number",
+            "Phone number",
+            "Email",
+            "Social media links",
+            "General location (town/suburb)",
+            "Full street address"
+          ]
+        },
+        {
+          "id": "s7_waOrder",
+          "label": "Do you want a button that opens WhatsApp with the product details already filled in?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "features",
+          "help": "A customer taps 'Order on WhatsApp' under a product, and WhatsApp opens with a message like 'Hi, I'd like the Mini Shoulder Bag in lilac'.",
+          "options": [
+            "Yes, definitely",
+            "Maybe",
+            "No",
+            "Not sure what that means: explain it"
+          ]
+        },
+        {
+          "id": "s7_form",
+          "label": "Should customers be able to send you an enquiry through a form on the website?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "features",
+          "options": [
+            "Yes",
+            "No, WhatsApp only",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s7_formTo",
+          "label": "Where should form enquiries be sent?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "help": "Enquiries sent straight to WhatsApp may need a paid service. We'll advise.",
+          "options": [
+            "To my email",
+            "To my WhatsApp",
+            "Both",
+            "Saved in a dashboard I can check"
+          ],
+          "showIf": {
+            "id": "s7_form",
+            "any": [
+              "Yes",
+              "Not sure yet"
+            ]
+          }
+        },
+        {
+          "id": "s7_autoConfirm",
+          "label": "Do you want customers to get an automatic 'thank you, we got your message' reply?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "options": [
+            "Yes",
+            "No",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s7_updates",
+          "label": "Do you want customers to receive order updates (e.g. 'Your bag is ready')?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "options": [
+            "Yes, automatically",
+            "I'll send these myself",
+            "No",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s7_tone",
+          "label": "How do you usually talk to customers? Paste a typical friendly reply you send.",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "help": "This helps us match your voice in the website words."
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "number": 8,
+      "title": "Delivery, Pickup & Logistics",
+      "description": "How products get from your hands to your customers' hands. You can give a general area instead of a full address.",
+      "summarySection": "delivery",
+      "questions": [
+        {
+          "id": "s8_base",
+          "label": "Where is your business based?",
+          "type": "text",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "example": "Kwekwe, Midlands: a town or suburb is fine"
+        },
+        {
+          "id": "s8_place",
+          "label": "Do you have a physical shop or studio?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "options": [
+            "Shop",
+            "Studio (by appointment)",
+            "Home-based",
+            "Market stall/pop-ups",
+            "Online only"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s8_public",
+          "label": "Should your location be shown on the website?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "options": [
+            "Show full address",
+            "Show area/town only",
+            "Don't show: tell people after they order",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s8_address",
+          "label": "Public address or area to display (optional)",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "help": "Only what you're comfortable with the whole internet seeing."
+        },
+        {
+          "id": "s8_pickup",
+          "label": "Can customers collect their orders?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "options": [
+            "Yes",
+            "By appointment",
+            "No"
+          ]
+        },
+        {
+          "id": "s8_pickupInfo",
+          "label": "Pickup details: where, when, any rules?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "showIf": {
+            "id": "s8_pickup",
+            "any": [
+              "Yes",
+              "By appointment"
+            ]
+          }
+        },
+        {
+          "id": "s8_deliver",
+          "label": "Do you deliver?",
+          "type": "radio",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "options": [
+            "Yes",
+            "Sometimes",
+            "No"
+          ]
+        },
+        {
+          "id": "s8_areas",
+          "label": "Where do you deliver?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "options": [
+            "My town only",
+            "Midlands region",
+            "Harare",
+            "Bulawayo",
+            "Nationwide in Zimbabwe",
+            "South Africa",
+            "International"
+          ],
+          "allowOther": true,
+          "showIf": {
+            "id": "s8_deliver",
+            "any": [
+              "Yes",
+              "Sometimes"
+            ]
+          }
+        },
+        {
+          "id": "s8_how",
+          "label": "How does delivery happen?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "options": [
+            "I deliver myself",
+            "Courier company",
+            "Bus/kombi/pickup point",
+            "Someone I know",
+            "Customer arranges their own"
+          ],
+          "allowOther": true,
+          "showIf": {
+            "id": "s8_deliver",
+            "any": [
+              "Yes",
+              "Sometimes"
+            ]
+          }
+        },
+        {
+          "id": "s8_couriers",
+          "label": "Which courier or delivery services do you use?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery"
+        },
+        {
+          "id": "s8_fees",
+          "label": "How are delivery fees worked out?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "options": [
+            "Free delivery",
+            "One flat fee",
+            "By area/city",
+            "By weight or size",
+            "Quoted each time",
+            "Customer pays the courier directly"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s8_feeInfo",
+          "label": "Details on delivery fees",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "example": "Kwekwe free, Harare USD 5 by bus, rest by quote"
+        },
+        {
+          "id": "s8_payer",
+          "label": "Who usually pays for delivery?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "options": [
+            "Customer",
+            "I do",
+            "Shared",
+            "Depends"
+          ]
+        },
+        {
+          "id": "s8_time",
+          "label": "How long does delivery take?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "example": "1–2 days in Kwekwe, 3–5 days elsewhere"
+        },
+        {
+          "id": "s8_sameDay",
+          "label": "Do you offer same-day delivery?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "options": [
+            "Yes",
+            "Sometimes",
+            "No"
+          ]
+        },
+        {
+          "id": "s8_intl",
+          "label": "Do you ship internationally?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "options": [
+            "Yes",
+            "Not yet, but I'd like to",
+            "No"
+          ]
+        },
+        {
+          "id": "s8_intlInfo",
+          "label": "International shipping details",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "showIf": {
+            "id": "s8_intl",
+            "any": [
+              "Yes",
+              "Not yet, but I'd like to"
+            ]
+          }
+        },
+        {
+          "id": "s8_packaging",
+          "label": "How are items packaged?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "delivery",
+          "options": [
+            "Plain packaging",
+            "Branded or gift packaging",
+            "Not yet decided"
+          ],
+          "allowOther": true
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "number": 9,
+      "title": "Business Hours & Availability",
+      "description": "So the website can set honest expectations with customers.",
+      "summarySection": "ordering",
+      "questions": [
+        {
+          "id": "s9_days",
+          "label": "Which days are you available for customers?",
+          "type": "checkbox",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "options": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
+        },
+        {
+          "id": "s9_hours",
+          "label": "Opening hours (if you have them)",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "example": "9am–5pm"
+        },
+        {
+          "id": "s9_contactHours",
+          "label": "Best hours for customers to contact you",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering"
+        },
+        {
+          "id": "s9_response",
+          "label": "How quickly do you usually reply to messages?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "options": [
+            "Within an hour",
+            "Same day",
+            "Within 24 hours",
+            "Within 2–3 days",
+            "It varies"
+          ]
+        },
+        {
+          "id": "s9_holidays",
+          "label": "Are you closed or busy on certain holidays or periods?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering"
+        },
+        {
+          "id": "s9_online",
+          "label": "Can customers send orders or enquiries at any time?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "options": [
+            "Yes: I reply during my hours",
+            "I only want orders within business hours",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s9_production",
+          "label": "Do you make products on specific days?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "example": "I crochet in the evenings and weekends."
+        },
+        {
+          "id": "s9_breaks",
+          "label": "Do you sometimes close orders (for breaks, or when fully booked)?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "help": "The website can show a banner like 'Orders closed until 1 March'.",
+          "options": [
+            "Yes",
+            "No",
+            "Occasionally"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "number": 10,
+      "title": "Photography & Media",
+      "description": "Your photos will make or break the website. Tell us what you already have.",
+      "summarySection": "assets",
+      "questions": [
+        {
+          "id": "s10_have",
+          "label": "What do you already have?",
+          "type": "matrix",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "assets",
+          "choices": [
+            "Plenty",
+            "A few",
+            "None",
+            "Not sure"
+          ],
+          "rows": [
+            {
+              "id": "logo",
+              "label": "Logo",
+              "help": ""
+            },
+            {
+              "id": "products",
+              "label": "Product photographs",
+              "help": ""
+            },
+            {
+              "id": "videos",
+              "label": "Videos",
+              "help": ""
+            },
+            {
+              "id": "bts",
+              "label": "Behind-the-scenes photos",
+              "help": ""
+            },
+            {
+              "id": "owner",
+              "label": "Photos of you",
+              "help": ""
+            },
+            {
+              "id": "workspace",
+              "label": "Photos of your workspace",
+              "help": ""
+            },
+            {
+              "id": "customers",
+              "label": "Customer photos",
+              "help": ""
+            },
+            {
+              "id": "social",
+              "label": "Social media content",
+              "help": ""
+            },
+            {
+              "id": "graphics",
+              "label": "Brand graphics",
+              "help": ""
+            },
+            {
+              "id": "posters",
+              "label": "Promotional posters",
+              "help": ""
+            }
+          ]
+        },
+        {
+          "id": "s10_public",
+          "label": "Can all your photos be used publicly on the website?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "assets",
+          "options": [
+            "Yes, all",
+            "Some: I'll tell you which",
+            "I'd like to approve each one",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s10_customerPerm",
+          "label": "Do you have permission to use customers' photos?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "assets",
+          "options": [
+            "Yes, from all",
+            "From some",
+            "No",
+            "I haven't asked yet",
+            "Not applicable"
+          ]
+        },
+        {
+          "id": "s10_submit",
+          "label": "Should customers be able to submit photos of themselves with your items?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "assets",
+          "options": [
+            "Yes",
+            "Maybe later",
+            "No"
+          ]
+        },
+        {
+          "id": "s10_gallery",
+          "label": "Do you want a gallery of your work?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "features",
+          "options": [
+            "Yes",
+            "Maybe",
+            "No"
+          ]
+        },
+        {
+          "id": "s10_insta",
+          "label": "Should your Instagram posts appear on the website?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "features",
+          "options": [
+            "Yes",
+            "Maybe",
+            "No",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s10_watermark",
+          "label": "Would you like your logo as a small watermark on photos?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "assets",
+          "help": "It makes it harder for others to copy your photos.",
+          "options": [
+            "Yes",
+            "No",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s10_ownerPhoto",
+          "label": "Are you comfortable appearing on the website?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "assets",
+          "options": [
+            "Yes, happy to",
+            "Maybe a few photos",
+            "Prefer not to",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s10_camera",
+          "label": "What do you take your photos with?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "assets",
+          "options": [
+            "Phone",
+            "Camera",
+            "A photographer",
+            "Mixed"
+          ]
+        },
+        {
+          "id": "s10_proHelp",
+          "label": "Would you like help planning a professional photo shoot?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "assets",
+          "options": [
+            "Yes",
+            "Maybe later",
+            "No"
+          ]
+        },
+        {
+          "id": "s10_photoStyle",
+          "label": "What photo style do you like?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "direction",
+          "options": [
+            "Bright and airy",
+            "Warm and cozy",
+            "Worn by a model or customer",
+            "Neat 'flat-lay' on a plain background",
+            "Dark and moody",
+            "Outdoor/natural settings"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s10_upload",
+          "label": "Upload placeholder: example photos or videos",
+          "type": "file",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "assets",
+          "help": "Send the actual files with the checklist at the end. Names only are stored here."
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "number": 11,
+      "title": "Website Goals",
+      "description": "What should the website do for you?",
+      "summarySection": "goals",
+      "questions": [
+        {
+          "id": "s11_goals",
+          "label": "What should the website achieve for you?",
+          "type": "checkbox",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "goals",
+          "options": [
+            "Showcase my work",
+            "Get more customers",
+            "Receive custom orders",
+            "Sell products",
+            "Build credibility",
+            "Build a professional brand",
+            "Reach customers outside my city",
+            "Reach international customers",
+            "Make ordering easier",
+            "Reduce repetitive WhatsApp questions",
+            "Display prices",
+            "Promote new products",
+            "Collect customer reviews"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s11_rank",
+          "label": "Rank your TOP 5 goals, with 1 being most important",
+          "type": "rank",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "goals",
+          "help": "Choose one goal for each position.",
+          "options": [
+            "Showcase my work",
+            "Get more customers",
+            "Receive custom orders",
+            "Sell products",
+            "Build credibility",
+            "Build a professional brand",
+            "Reach customers outside my city",
+            "Reach international customers",
+            "Make ordering easier",
+            "Reduce repetitive WhatsApp questions",
+            "Display prices",
+            "Promote new products",
+            "Collect customer reviews"
+          ],
+          "rankCount": 5
+        },
+        {
+          "id": "s11_success",
+          "label": "What would make you say the website was a success after 6 months?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "goals",
+          "example": "20 enquiries a month, regular custom orders, customers from Harare..."
+        },
+        {
+          "id": "s11_target",
+          "label": "How many orders or enquiries a month would make you very happy?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "goals",
+          "example": "10 enquiries and 5 orders"
+        },
+        {
+          "id": "s11_measure",
+          "label": "How would you like to measure success?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "goals",
+          "options": [
+            "Number of enquiries",
+            "Number of orders",
+            "Sales amount",
+            "Website visitors",
+            "Social media followers",
+            "Customer reviews"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s11_worries",
+          "label": "What worries you about having a website?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "goals",
+          "example": "Cost, keeping it updated, copying of my designs..."
+        },
+        {
+          "id": "s11_deadline",
+          "label": "Is there a date you'd like the website to be ready by?",
+          "type": "date",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "goals",
+          "help": "For example before a busy season or event."
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "number": 12,
+      "title": "Website Features",
+      "description": "Here's a menu of things a website can do. Tell us which matter to you. If something sounds unfamiliar, read the short explanation, or choose 'Not sure' and we'll talk.",
+      "summarySection": "features",
+      "questions": [
+        {
+          "id": "s12_features",
+          "label": "For each feature, choose how much you need it",
+          "type": "matrix",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "features",
+          "choices": [
+            "Essential",
+            "Nice to have",
+            "Not needed",
+            "Not sure"
+          ],
+          "rows": [
+            {
+              "id": "home",
+              "label": "Home page",
+              "help": "The first page people see, with your best work and story."
+            },
+            {
+              "id": "catalogue",
+              "label": "Product catalogue",
+              "help": "Pages showing your items, grouped into categories."
+            },
+            {
+              "id": "detail",
+              "label": "Product detail pages",
+              "help": "A page for each item with photos, price, sizes and colours."
+            },
+            {
+              "id": "search",
+              "label": "Search",
+              "help": "A box where visitors type what they're looking for."
+            },
+            {
+              "id": "filter",
+              "label": "Product filtering",
+              "help": "Narrow items by type, colour, size or price."
+            },
+            {
+              "id": "cart",
+              "label": "Shopping cart",
+              "help": "Visitors collect several items before paying."
+            },
+            {
+              "id": "checkout",
+              "label": "Online checkout",
+              "help": "Customers pay on the website."
+            },
+            {
+              "id": "whatsapp",
+              "label": "WhatsApp ordering",
+              "help": "A button that opens WhatsApp with the product details filled in."
+            },
+            {
+              "id": "customForm",
+              "label": "Custom-order form",
+              "help": "A guided form where customers describe what they want and upload pictures."
+            },
+            {
+              "id": "accounts",
+              "label": "Customer accounts",
+              "help": "Customers log in to see past orders."
+            },
+            {
+              "id": "wishlist",
+              "label": "Wishlist",
+              "help": "Customers save favourites for later."
+            },
+            {
+              "id": "reviews",
+              "label": "Reviews",
+              "help": "Customers rate and review products."
+            },
+            {
+              "id": "testimonials",
+              "label": "Testimonials",
+              "help": "Kind words from happy customers, shown by you."
+            },
+            {
+              "id": "gallery",
+              "label": "Gallery",
+              "help": "A beautiful photo showcase of your past work."
+            },
+            {
+              "id": "blog",
+              "label": "Blog",
+              "help": "Articles such as crochet tips, stories and news."
+            },
+            {
+              "id": "about",
+              "label": "About page",
+              "help": "Your story."
+            },
+            {
+              "id": "contact",
+              "label": "Contact page",
+              "help": "Phone, WhatsApp, email, map and form."
+            },
+            {
+              "id": "faq",
+              "label": "FAQ",
+              "help": "Answers to common questions."
+            },
+            {
+              "id": "deliveryInfo",
+              "label": "Delivery information",
+              "help": "How delivery and pickup work."
+            },
+            {
+              "id": "sizeGuide",
+              "label": "Size guide",
+              "help": "Helps customers choose clothing sizes."
+            },
+            {
+              "id": "careGuide",
+              "label": "Care guide",
+              "help": "How to wash and care for crochet."
+            },
+            {
+              "id": "promos",
+              "label": "Promotions",
+              "help": "Sale banners and special offers."
+            },
+            {
+              "id": "codes",
+              "label": "Discount codes",
+              "help": "Codes customers type in to get a discount."
+            },
+            {
+              "id": "giftCards",
+              "label": "Gift cards",
+              "help": "Customers buy a gift for someone else."
+            },
+            {
+              "id": "newsletter",
+              "label": "Newsletter",
+              "help": "Collect emails to send news and offers."
+            },
+            {
+              "id": "instagram",
+              "label": "Instagram integration",
+              "help": "Show your Instagram posts on the site."
+            },
+            {
+              "id": "tiktok",
+              "label": "TikTok integration",
+              "help": "Show your TikTok videos on the site."
+            },
+            {
+              "id": "booking",
+              "label": "Booking/consultation",
+              "help": "Customers book a time to discuss a design or measurements."
+            },
+            {
+              "id": "tracking",
+              "label": "Order tracking",
+              "help": "Customers see where their order is."
+            },
+            {
+              "id": "admin",
+              "label": "Admin dashboard",
+              "help": "A private page where you manage everything."
+            },
+            {
+              "id": "inventory",
+              "label": "Inventory management",
+              "help": "Keeps count of what's in stock."
+            },
+            {
+              "id": "reports",
+              "label": "Sales reporting",
+              "help": "Simple summaries of what sold."
+            },
+            {
+              "id": "customers",
+              "label": "Customer management",
+              "help": "A list of your customers and their orders."
+            }
+          ]
+        },
+        {
+          "id": "s12_top3",
+          "label": "If you could only have THREE of these, which would they be?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "features"
+        },
+        {
+          "id": "s12_other",
+          "label": "Anything else you'd like the website to do that isn't on the list?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "features"
+        },
+        {
+          "id": "s12_lang",
+          "label": "Which language(s) should the website be in?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "content",
+          "options": [
+            "English",
+            "Shona",
+            "Ndebele"
+          ],
+          "allowOther": true
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "number": 13,
+      "title": "Website Content",
+      "description": "A website is made of words and pictures. Let us know what you have and what you'd like help with.",
+      "summarySection": "content",
+      "questions": [
+        {
+          "id": "s13_have",
+          "label": "For each piece of content, tell us where you are",
+          "type": "matrix",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "content",
+          "choices": [
+            "Ready",
+            "Needs updating",
+            "Don't have it",
+            "Please help me write it",
+            "Not needed"
+          ],
+          "rows": [
+            {
+              "id": "desc",
+              "label": "Business description",
+              "help": ""
+            },
+            {
+              "id": "about",
+              "label": "About story",
+              "help": ""
+            },
+            {
+              "id": "bio",
+              "label": "Founder biography",
+              "help": ""
+            },
+            {
+              "id": "productDesc",
+              "label": "Product descriptions",
+              "help": ""
+            },
+            {
+              "id": "pricing",
+              "label": "Pricing",
+              "help": ""
+            },
+            {
+              "id": "faq",
+              "label": "FAQs",
+              "help": ""
+            },
+            {
+              "id": "delivery",
+              "label": "Delivery policy",
+              "help": ""
+            },
+            {
+              "id": "returns",
+              "label": "Returns policy",
+              "help": ""
+            },
+            {
+              "id": "refund",
+              "label": "Refund policy",
+              "help": ""
+            },
+            {
+              "id": "custom",
+              "label": "Custom-order policy",
+              "help": ""
+            },
+            {
+              "id": "privacy",
+              "label": "Privacy information",
+              "help": ""
+            },
+            {
+              "id": "terms",
+              "label": "Terms and conditions",
+              "help": ""
+            },
+            {
+              "id": "contact",
+              "label": "Contact details",
+              "help": ""
+            },
+            {
+              "id": "social",
+              "label": "Social media links",
+              "help": ""
+            },
+            {
+              "id": "testimonials",
+              "label": "Testimonials",
+              "help": ""
+            }
+          ]
+        },
+        {
+          "id": "s13_help",
+          "label": "Do you want help writing the website content?",
+          "type": "radio",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "content",
+          "options": [
+            "Yes, all of it",
+            "Yes, some of it",
+            "No, I'll write it myself",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s13_tone",
+          "label": "How should the website 'sound'?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "direction",
+          "options": [
+            "Warm and friendly",
+            "Elegant and polished",
+            "Chatty and personal",
+            "Poetic and gentle",
+            "Short and simple",
+            "Professional",
+            "Playful"
+          ],
+          "allowOther": true,
+          "maxChoices": 3
+        },
+        {
+          "id": "s13_words",
+          "label": "Are there words or phrases you always use, or love?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "content",
+          "example": "'Handcrafted with love', 'one of a kind'"
+        },
+        {
+          "id": "s13_wordsAvoid",
+          "label": "Words you'd rather never see on your website?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "content"
+        },
+        {
+          "id": "s13_testimonials",
+          "label": "Paste 3 or more kind things customers have said (optional)",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "content",
+          "help": "WhatsApp comments or Instagram messages. Remove phone numbers."
+        },
+        {
+          "id": "s13_testimonialOk",
+          "label": "Do you have permission to show these comments publicly?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "content",
+          "options": [
+            "Yes",
+            "I'll ask them",
+            "Not sure yet",
+            "Not applicable"
+          ]
+        },
+        {
+          "id": "s13_blog",
+          "label": "If there was a blog, what would you write about?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "content",
+          "options": [
+            "Crochet tips",
+            "Care guides",
+            "Behind-the-scenes",
+            "New collections",
+            "Customer stories",
+            "Style inspiration",
+            "I don't want a blog"
+          ],
+          "allowOther": true
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "number": 14,
+      "title": "Policies",
+      "description": "Please tell us your REAL rules, not what you think a business 'should' say. We won't invent policies for you; we'll only write down what you decide. Custom-order cancellations are in Section 4.",
+      "summarySection": "policies",
+      "questions": [
+        {
+          "id": "s14_returns",
+          "label": "Do you accept returns on ready-made items?",
+          "type": "radio",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "policies",
+          "options": [
+            "Yes, for any reason",
+            "Only if faulty or damaged",
+            "Exchanges only",
+            "No returns",
+            "Case by case",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s14_returnsInfo",
+          "label": "Returns details: time allowed, condition, who pays",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": true,
+          "summarySection": "policies"
+        },
+        {
+          "id": "s14_exchanges",
+          "label": "Exchanges: how do they work?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": true,
+          "summarySection": "policies"
+        },
+        {
+          "id": "s14_refunds",
+          "label": "Refunds: when are they given and how?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": true,
+          "summarySection": "policies"
+        },
+        {
+          "id": "s14_cancel",
+          "label": "Cancellations (ready-made items): what happens if a customer cancels?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "policies"
+        },
+        {
+          "id": "s14_damaged",
+          "label": "A product arrives damaged or has a fault: what do you do?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "policies"
+        },
+        {
+          "id": "s14_incorrect",
+          "label": "The customer receives the wrong item or colour: what then?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "policies"
+        },
+        {
+          "id": "s14_delivery",
+          "label": "Delivery problems (lost, delayed, courier damage): who is responsible?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "policies"
+        },
+        {
+          "id": "s14_late",
+          "label": "If an order will be late: what happens, and how are customers told?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "policies"
+        },
+        {
+          "id": "s14_unclaimed",
+          "label": "Unclaimed orders: how long do you keep them, and then what?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "policies"
+        },
+        {
+          "id": "s14_care",
+          "label": "Product care: how should customers wash and care for crochet items?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": true,
+          "summarySection": "policies",
+          "example": "Hand wash cold, dry flat, don't hang."
+        },
+        {
+          "id": "s14_customer",
+          "label": "What are customers responsible for?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "policies",
+          "example": "Giving correct measurements, answering messages promptly, collecting on time."
+        },
+        {
+          "id": "s14_write",
+          "label": "Would you like us to draft these policies in plain language from your answers, for you to approve?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "policies",
+          "options": [
+            "Yes",
+            "No, I'll write them",
+            "Not sure yet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "number": 15,
+      "title": "Social Media",
+      "description": "Where your customers already find you.",
+      "summarySection": "social",
+      "questions": [
+        {
+          "id": "s15_accounts",
+          "label": "Add each social media account",
+          "type": "repeater",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "social",
+          "help": "Facebook, Instagram, TikTok, WhatsApp, Pinterest, anything you have or plan to use.",
+          "fields": [
+            {
+              "id": "platform",
+              "label": "Platform",
+              "type": "select",
+              "options": [
+                "Instagram",
+                "Facebook",
+                "TikTok",
+                "WhatsApp",
+                "Pinterest",
+                "YouTube",
+                "X (Twitter)",
+                "LinkedIn",
+                "Other"
+              ]
+            },
+            {
+              "id": "username",
+              "label": "Username",
+              "type": "text",
+              "ex": "@mimahsatelier"
+            },
+            {
+              "id": "link",
+              "label": "Link",
+              "type": "url"
+            },
+            {
+              "id": "purpose",
+              "label": "What do you use it for?",
+              "type": "text",
+              "ex": "Showing new work, taking orders"
+            },
+            {
+              "id": "status",
+              "label": "Active?",
+              "type": "select",
+              "options": [
+                "Very active",
+                "Sometimes",
+                "Inactive",
+                "Planning to start"
+              ]
+            },
+            {
+              "id": "followers",
+              "label": "Roughly how many followers?",
+              "type": "number"
+            }
+          ]
+        },
+        {
+          "id": "s15_best",
+          "label": "Which platform brings you the most customers?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "social",
+          "options": [
+            "Instagram",
+            "Facebook",
+            "TikTok",
+            "WhatsApp",
+            "Word of mouth",
+            "Other",
+            "Not sure"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s15_promote",
+          "label": "Which platform should the website promote the most?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "social",
+          "options": [
+            "Instagram",
+            "Facebook",
+            "TikTok",
+            "WhatsApp",
+            "Other",
+            "Not sure"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s15_feeds",
+          "label": "Do you want social media feeds shown on the website?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "social",
+          "options": [
+            "Yes",
+            "Maybe",
+            "No"
+          ]
+        },
+        {
+          "id": "s15_freq",
+          "label": "How often do you post?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "social",
+          "options": [
+            "Daily",
+            "Weekly",
+            "A few times a month",
+            "Rarely"
+          ]
+        },
+        {
+          "id": "s15_runs",
+          "label": "Who manages your social media?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "social",
+          "options": [
+            "Just me",
+            "Someone helps me",
+            "I'd like help"
+          ]
+        },
+        {
+          "id": "s15_hashtags",
+          "label": "Hashtags you use for the brand",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "social"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "number": 16,
+      "title": "Competitors & Inspiration",
+      "description": "Understanding your world helps us make Mimah's Atelier stand out. Paste links or @handles anywhere.",
+      "summarySection": "competitors",
+      "questions": [
+        {
+          "id": "s16_competitors",
+          "label": "Who do you consider your competitors?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "competitors",
+          "help": "Other crochet sellers, or shops selling similar items."
+        },
+        {
+          "id": "s16_admired",
+          "label": "Which crochet businesses do you admire?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "competitors"
+        },
+        {
+          "id": "s16_local",
+          "label": "Which local (Zimbabwean) businesses inspire you, in any industry?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "competitors"
+        },
+        {
+          "id": "s16_intl",
+          "label": "Which international brands inspire you?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "competitors"
+        },
+        {
+          "id": "s16_likeSites",
+          "label": "Websites you like (and why)",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "competitors"
+        },
+        {
+          "id": "s16_dislikeSites",
+          "label": "Websites you dislike (and why)",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "competitors"
+        },
+        {
+          "id": "s16_borrow",
+          "label": "Features you've seen elsewhere that you'd love to have",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "competitors"
+        },
+        {
+          "id": "s16_different",
+          "label": "What should make Mimah's Atelier DIFFERENT from all of them?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "competitors"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "number": 17,
+      "title": "The Future of Your Business",
+      "description": "Dream a little. A website should grow with you.",
+      "summarySection": "future",
+      "questions": [
+        {
+          "id": "s17_1yr",
+          "label": "Where do you want the business to be in 1 year?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "future"
+        },
+        {
+          "id": "s17_3yr",
+          "label": "In 3 years?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "future"
+        },
+        {
+          "id": "s17_5yr",
+          "label": "In 5 years?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "future"
+        },
+        {
+          "id": "s17_plans",
+          "label": "Which of these are you thinking about?",
+          "type": "matrix",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "future",
+          "choices": [
+            "Definitely",
+            "Maybe someday",
+            "Not planned",
+            "Not sure"
+          ],
+          "rows": [
+            {
+              "id": "shop",
+              "label": "Opening a physical shop",
+              "help": ""
+            },
+            {
+              "id": "staff",
+              "label": "Hiring employees",
+              "help": ""
+            },
+            {
+              "id": "teach",
+              "label": "Teaching crochet",
+              "help": ""
+            },
+            {
+              "id": "workshops",
+              "label": "Running crochet workshops",
+              "help": ""
+            },
+            {
+              "id": "wholesale",
+              "label": "Selling wholesale",
+              "help": ""
+            },
+            {
+              "id": "intl",
+              "label": "Selling internationally",
+              "help": ""
+            },
+            {
+              "id": "other",
+              "label": "Expanding into other handmade products",
+              "help": ""
+            },
+            {
+              "id": "store",
+              "label": "A full online store",
+              "help": ""
+            },
+            {
+              "id": "fashion",
+              "label": "Building a recognisable fashion brand",
+              "help": ""
+            },
+            {
+              "id": "collab",
+              "label": "Collaborations with other brands or creatives",
+              "help": ""
+            },
+            {
+              "id": "corporate",
+              "label": "Corporate/custom gifting",
+              "help": ""
+            }
+          ]
+        },
+        {
+          "id": "s17_ecomWhen",
+          "label": "If you want an online store, when?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "features",
+          "options": [
+            "From launch",
+            "Within 6 months",
+            "In a year or more",
+            "Not sure",
+            "Not planned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "number": 18,
+      "title": "Admin & Business Management",
+      "description": "A good website also helps you run the business. Tell us what you'd like to control yourself.",
+      "summarySection": "technical",
+      "questions": [
+        {
+          "id": "s18_manage",
+          "label": "What would you like to manage from a private admin area?",
+          "type": "matrix",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "choices": [
+            "Essential",
+            "Nice to have",
+            "Not needed",
+            "Not sure"
+          ],
+          "rows": [
+            {
+              "id": "products",
+              "label": "Products",
+              "help": ""
+            },
+            {
+              "id": "orders",
+              "label": "Orders",
+              "help": ""
+            },
+            {
+              "id": "customers",
+              "label": "Customers",
+              "help": ""
+            },
+            {
+              "id": "custom",
+              "label": "Custom requests",
+              "help": ""
+            },
+            {
+              "id": "inventory",
+              "label": "Inventory/stock",
+              "help": ""
+            },
+            {
+              "id": "prices",
+              "label": "Prices",
+              "help": ""
+            },
+            {
+              "id": "promos",
+              "label": "Promotions",
+              "help": ""
+            },
+            {
+              "id": "testimonials",
+              "label": "Testimonials",
+              "help": ""
+            },
+            {
+              "id": "gallery",
+              "label": "Gallery",
+              "help": ""
+            },
+            {
+              "id": "content",
+              "label": "Website content",
+              "help": ""
+            },
+            {
+              "id": "messages",
+              "label": "Messages",
+              "help": ""
+            },
+            {
+              "id": "reports",
+              "label": "Reports",
+              "help": ""
+            }
+          ]
+        },
+        {
+          "id": "s18_people",
+          "label": "How many people will manage the website?",
+          "type": "number",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "example": "1"
+        },
+        {
+          "id": "s18_staff",
+          "label": "Will different people need different levels of access (e.g. staff accounts)?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Yes",
+            "No, just me",
+            "Maybe later",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s18_alerts",
+          "label": "How should you be alerted about a new enquiry or order?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "WhatsApp message",
+            "Email",
+            "SMS",
+            "Notification on the admin page"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s18_reports",
+          "label": "What would you like to see in reports?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Best-selling items",
+            "Money earned",
+            "Orders per month",
+            "Where customers come from",
+            "Custom requests received"
+          ],
+          "allowOther": true
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "number": 19,
+      "title": "Search Engines & Online Discovery",
+      "description": "How new customers find you on Google. Domain and hosting questions are in Section 21.",
+      "summarySection": "technical",
+      "questions": [
+        {
+          "id": "s19_search",
+          "label": "What do you think people would type into Google to find you?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "example": "crochet bags Zimbabwe, handmade crochet Kwekwe"
+        },
+        {
+          "id": "s19_locations",
+          "label": "Which places should be linked with your business?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Kwekwe",
+            "Midlands",
+            "Harare",
+            "Bulawayo",
+            "All of Zimbabwe",
+            "Southern Africa",
+            "Worldwide"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s19_products",
+          "label": "Which products would you most like to be found for?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical"
+        },
+        {
+          "id": "s19_rank",
+          "label": "Would you like to appear when people search 'crochet in Zimbabwe' (and similar)?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Yes, nationwide",
+            "Mainly locally",
+            "Internationally too",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s19_gbp",
+          "label": "Do you have a Google Business Profile (the listing shown on Google Maps)?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Yes",
+            "No",
+            "Not sure what that is: please explain"
+          ]
+        },
+        {
+          "id": "s19_gbpLink",
+          "label": "Link to your Google listing",
+          "type": "url",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "showIf": {
+            "id": "s19_gbp",
+            "any": [
+              "Yes"
+            ]
+          }
+        },
+        {
+          "id": "s19_reviews",
+          "label": "Would you like customers to leave reviews on Google?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Yes",
+            "No",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s19_dirs",
+          "label": "Which online listings are you on?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Google Maps",
+            "Facebook page",
+            "Instagram",
+            "Local business directories",
+            "None yet"
+          ],
+          "allowOther": true
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "number": 20,
+      "title": "Legal & Business Information",
+      "description": "Only share what is needed and what you're comfortable with. Please do NOT enter ID numbers, bank details, passwords or other sensitive personal information anywhere in this questionnaire.",
+      "privacyNote": "Privacy reminder: the questionnaire is for business information only. Never include ID or passport numbers, bank/wallet numbers, or passwords.",
+      "summarySection": "business",
+      "questions": [
+        {
+          "id": "s20_status",
+          "label": "Is the business formally registered?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business",
+          "options": [
+            "Yes, registered",
+            "Not registered: I trade informally",
+            "Planning to register",
+            "Prefer not to say",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "s20_legal",
+          "label": "Registered business name (if registered)",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business",
+          "showIf": {
+            "id": "s20_status",
+            "any": [
+              "Yes, registered"
+            ]
+          }
+        },
+        {
+          "id": "s20_trading",
+          "label": "Trading name (the name customers know)",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business",
+          "example": "Mimah's Atelier"
+        },
+        {
+          "id": "s20_reg",
+          "label": "Registration number: only if you want it shown on the website",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business",
+          "showIf": {
+            "id": "s20_status",
+            "any": [
+              "Yes, registered"
+            ]
+          }
+        },
+        {
+          "id": "s20_address",
+          "label": "Public business address (only if you want it shown)",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business"
+        },
+        {
+          "id": "s20_tax",
+          "label": "Do your prices need to show tax such as VAT?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business",
+          "options": [
+            "No",
+            "Yes",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "s20_copy",
+          "label": "Your designs and photos: how do you feel about others using them?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business",
+          "options": [
+            "All rights reserved. Please ask first",
+            "Sharing is fine with credit to me",
+            "I'd like help deciding",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "s20_designs",
+          "label": "Do you have concerns about people copying your designs or photos?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "business"
+        },
+        {
+          "id": "s20_terms",
+          "label": "Any rules that MUST be in the website's terms and conditions?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": true,
+          "summarySection": "business"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "number": 21,
+      "title": "Technical & Website Management (beginner-friendly)",
+      "description": "Don't worry if you don't know the answers. 'Not sure yet' is perfectly fine and we'll explain everything.",
+      "summarySection": "technical",
+      "questions": [
+        {
+          "id": "s21_domain",
+          "label": "Do you already own a web address (domain), like mimahsatelier.com?",
+          "type": "radio",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "help": "A domain is your website's name on the internet, a bit like a phone number you pay for each year.",
+          "options": [
+            "Yes",
+            "No",
+            "Someone bought it for me",
+            "Not sure what that is"
+          ]
+        },
+        {
+          "id": "s21_domainName",
+          "label": "If yes, what is it? If no, what names would you like?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "example": "mimahsatelier.com, mimahsatelier.co.zw"
+        },
+        {
+          "id": "s21_hosting",
+          "label": "Do you already have website hosting (the 'home' where a website lives)?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Yes",
+            "No",
+            "Not sure what that is"
+          ]
+        },
+        {
+          "id": "s21_hostingProvider",
+          "label": "Which company, if you know?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "showIf": {
+            "id": "s21_hosting",
+            "any": [
+              "Yes"
+            ]
+          }
+        },
+        {
+          "id": "s21_bizEmail",
+          "label": "Do you have a business email address?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Yes",
+            "No, I use a personal Gmail etc.",
+            "No, I'd like one",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "s21_google",
+          "label": "Do you have a Google account?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Yes",
+            "No",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "s21_waBiz",
+          "label": "Do you have WhatsApp Business installed?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Yes",
+            "No",
+            "Not sure what that is"
+          ]
+        },
+        {
+          "id": "s21_manager",
+          "label": "Who should manage the website day to day?",
+          "type": "radio",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Me",
+            "Me, with some help",
+            "Someone else (family/employee)",
+            "The designer, for a monthly fee",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s21_selfAdd",
+          "label": "Do you want to add and edit products yourself?",
+          "type": "radio",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Yes",
+            "Sometimes",
+            "No: someone else will",
+            "Not sure yet"
+          ]
+        },
+        {
+          "id": "s21_training",
+          "label": "Would you like training on how to use it?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Yes",
+            "A short guide is enough",
+            "No",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "s21_maintainer",
+          "label": "Do you have someone who can help maintain the website?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Yes",
+            "No",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "s21_devices",
+          "label": "What will you mostly use to manage the website?",
+          "type": "checkbox",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Phone",
+            "Laptop/computer",
+            "Tablet"
+          ]
+        },
+        {
+          "id": "s21_comfort",
+          "label": "How comfortable are you with computers and apps?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Very comfortable",
+            "Fairly comfortable",
+            "Only the basics",
+            "I'd need a lot of help"
+          ]
+        },
+        {
+          "id": "s21_internet",
+          "label": "How reliable is your internet where you work?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "Reliable",
+            "Sometimes unreliable (data bundles, power cuts)",
+            "Often unreliable"
+          ]
+        },
+        {
+          "id": "s21_customersPhone",
+          "label": "How do most of your customers browse?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "audience",
+          "help": "This helps us design for phones first, and keep pages light for people with limited data.",
+          "options": [
+            "Mostly phones",
+            "Phones and computers",
+            "Mostly computers",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "s21_budget",
+          "label": "How are you thinking about the budget for the website and yearly running costs?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "options": [
+            "As low as possible",
+            "Modest: good value",
+            "Flexible: quality comes first",
+            "Not sure yet: I'd like options"
+          ]
+        },
+        {
+          "id": "s21_budgetNote",
+          "label": "Budget or monthly limit, if you want to share one (optional)",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "technical",
+          "help": "Domain and hosting have yearly costs. We'll show you options."
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "number": 22,
+      "title": "Final Brand Questions",
+      "description": "Almost there. These are the most personal questions, and they often become the most beautiful words on a website.",
+      "summarySection": "brand",
+      "questions": [
+        {
+          "id": "s22_person",
+          "label": "If Mimah's Atelier were a person, how would you describe her personality?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand"
+        },
+        {
+          "id": "s22_three",
+          "label": "What three words should customers use when describing your brand?",
+          "type": "text",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand"
+        },
+        {
+          "id": "s22_never",
+          "label": "What should customers NEVER think when they see your brand?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand"
+        },
+        {
+          "id": "s22_remember",
+          "label": "What is the one thing you want every customer to remember?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand"
+        },
+        {
+          "id": "s22_dreamCustomer",
+          "label": "Who is your dream customer?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "audience"
+        },
+        {
+          "id": "s22_dreamProduct",
+          "label": "What is your dream product to make?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "catalogue"
+        },
+        {
+          "id": "s22_dream5",
+          "label": "What would your dream Mimah's Atelier look like in five years?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "future"
+        },
+        {
+          "id": "s22_complete",
+          "label": "Complete this sentence: “Mimah's Atelier is…”",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand"
+        },
+        {
+          "id": "s22_anything",
+          "label": "Is there anything else we should know?",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "brand",
+          "help": "Worries, ideas, deadlines, things that didn't fit anywhere else."
+        },
+        {
+          "id": "s22_followup",
+          "label": "How would you like us to follow up with you?",
+          "type": "radio",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "ordering",
+          "options": [
+            "WhatsApp chat",
+            "Phone call",
+            "Video call",
+            "Email",
+            "In person"
+          ]
+        },
+        {
+          "id": "s22_who",
+          "label": "Your name (or the name of the person who filled this in)",
+          "type": "text",
+          "required": true,
+          "allowNotSure": false,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "business"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "number": 23,
+      "title": "Asset Upload Checklist",
+      "description": "After you finish, please prepare these. Tell us where you are with each. (The prototype can't upload files: send them using the method you choose below.)",
+      "summarySection": "assets",
+      "questions": [
+        {
+          "id": "s23_assets",
+          "label": "Your asset checklist",
+          "type": "matrix",
+          "required": true,
+          "allowNotSure": true,
+          "allowNotApplicable": false,
+          "allowHelpWriting": false,
+          "summarySection": "assets",
+          "choices": [
+            "Ready to send",
+            "Will prepare",
+            "Don't have",
+            "Not needed"
+          ],
+          "rows": [
+            {
+              "id": "logo",
+              "label": "Logo",
+              "help": ""
+            },
+            {
+              "id": "logoHi",
+              "label": "Original/high-resolution logo",
+              "help": ""
+            },
+            {
+              "id": "logoAlt",
+              "label": "Other logo versions",
+              "help": ""
+            },
+            {
+              "id": "products",
+              "label": "Product photos",
+              "help": ""
+            },
+            {
+              "id": "videos",
+              "label": "Product videos",
+              "help": ""
+            },
+            {
+              "id": "owner",
+              "label": "Owner/founder photo",
+              "help": ""
+            },
+            {
+              "id": "workspace",
+              "label": "Workspace photos",
+              "help": ""
+            },
+            {
+              "id": "customers",
+              "label": "Customer photos (with permission)",
+              "help": ""
+            },
+            {
+              "id": "social",
+              "label": "Social media links",
+              "help": ""
+            },
+            {
+              "id": "priceList",
+              "label": "Product price list",
+              "help": ""
+            },
+            {
+              "id": "catalogue",
+              "label": "Product catalogue",
+              "help": ""
+            },
+            {
+              "id": "docs",
+              "label": "Business documents (where appropriate)",
+              "help": ""
+            },
+            {
+              "id": "promo",
+              "label": "Existing promotional material",
+              "help": ""
+            },
+            {
+              "id": "testimonials",
+              "label": "Testimonials",
+              "help": ""
+            },
+            {
+              "id": "inspo",
+              "label": "Brand inspiration (links, screenshots, Pinterest board)",
+              "help": ""
+            },
+            {
+              "id": "other",
+              "label": "Other relevant files",
+              "help": ""
+            }
+          ]
+        },
+        {
+          "id": "s23_send",
+          "label": "How will you send your files?",
+          "type": "checkbox",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "assets",
+          "options": [
+            "WhatsApp",
+            "Email",
+            "Google Drive/Dropbox link",
+            "Flash drive/in person",
+            "Not sure yet"
+          ],
+          "allowOther": true
+        },
+        {
+          "id": "s23_upload",
+          "label": "Upload placeholder: anything else",
+          "type": "file",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "assets",
+          "help": "Names only are stored. Send the files separately."
+        },
+        {
+          "id": "s23_notes",
+          "label": "Notes about your files",
+          "type": "longtext",
+          "required": false,
+          "allowNotSure": true,
+          "allowNotApplicable": true,
+          "allowHelpWriting": false,
+          "summarySection": "assets",
+          "example": "My best photos are on my old phone."
+        }
+      ]
+    }
+  ]
+}
