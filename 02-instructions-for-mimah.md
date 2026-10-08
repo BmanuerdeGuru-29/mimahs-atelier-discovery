@@ -28,7 +28,7 @@ This questionnaire helps me understand you, your craft and your customers *befor
 - Everything is **saved automatically on your device** as you go. You'll see “✓ Saved on this device” at the top.
 - To continue later, open the same file or link **on the same phone/computer and browser** and tap **“Continue where I left off”**.
 - Want to switch devices? Tap **“Download my answers (backup)”** on the review page, then on the new device tap **“Load a saved file”** on the welcome page.
-- **Privacy:** your answers stay on your device. They are not sent anywhere until *you* send me the file. Please **don't type passwords, ID numbers or bank/EcoCash numbers** anywhere.
+- **Privacy:** your answers stay on your device. They are only sent when *you* press Submit (or send me the file yourself). Please **don't type passwords, ID numbers or bank/EcoCash numbers** anywhere.
 
 ## Moving around
 - Use the list of sections on the left (on a phone, tap the ☰ button at the top).

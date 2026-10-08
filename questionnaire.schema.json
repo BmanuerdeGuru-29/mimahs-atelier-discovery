@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "id": "mimahs-atelier-discovery",
   "description": "Definition of every section and question. Used to drive the digital questionnaire and to interpret exported response files.",
-  "storageNote": "Your answers are saved only on this device, in this browser. Nothing is sent anywhere until you choose to send the file yourself.",
+  "storageNote": "Your answers are saved only on this device, in this browser. Nothing is sent to anyone until you press Submit (or send the file yourself).",
   "answerStatuses": {
     "unsure": "Not sure yet",
     "na": "Not applicable",

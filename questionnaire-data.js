@@ -27,7 +27,7 @@
     version: "1.0.0",
     title: "Business & Website Discovery Questionnaire",
     brand: "MIMAH'S ATELIER",
-    storageNote: "Your answers are saved only on this device, in this browser. Nothing is sent anywhere until you choose to send the file yourself.",
+    storageNote: "Your answers are saved only on this device, in this browser. Nothing is sent to anyone until you press Submit (or send the file yourself).",
     chipLabels: { unsure: "Not sure yet", na: "Not applicable", help: "Please help me write this" },
     summarySections: [
       ["brand", "Brand Summary"], ["business", "Business Summary"], ["audience", "Target Audience"],
